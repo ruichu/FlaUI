@@ -55,7 +55,7 @@ namespace FlaUI.Core.WindowsAPI
         [DllImport("user32.dll", EntryPoint = "SendMessage", CharSet = CharSet.Auto)]
         public static extern bool SendMessage(IntPtr hWnd, uint Msg, int wParam, StringBuilder lParam);
 
-        [DllImport("user32.dll", SetLastError = true)]
+        [DllImport("UIRobotCoreNative.dll", SetLastError = true)]
         public static extern uint SendInput(uint nInputs, [MarshalAs(UnmanagedType.LPArray), In] INPUT[] pInputs, int cbSize);
 
         [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
